@@ -144,17 +144,6 @@
  - multiprocessing.Pool：用于多进程处理
 
 #### 2.5.3. 类和方法说明
-
----
-### 2.6. embaddings_process.py文件
-#### 2.6.1. 概述
-  把语料中的单候选和多候选分隔开
-#### 2.6.2. 导入依赖库
-该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
- - from collections import Counter： ：用于计数数据中元素的频率
-
-#### 2.6.3. 类和方法说明
 - multipro_python_query(data_list):Python 查询解析方法。
 - multipro_python_code(data_list):Python 代码解析方法。
 - multipro_python_context(data_list):Python 上下文解析方法。
@@ -164,12 +153,33 @@
 - python_parse_final(python_list,split_num):最终的python版解析函数。
 - sql_parse_final(sql_list,split_num):最终的sql版解析函数。
 - main(lang_type,split_num,source_path,save_path):将两个版本的解析集合到一个函数中，并保存解析结果。
-
-###### 方法
+- test(path1,path2):测试文件是否保存成功。
+---
+### 2.6. embaddings_process.py文件
+#### 2.6.1. 概述
+  从大词典中获取特定于于语料的词典；将数据处理成待打标签的形式
+#### 2.6.2. 导入依赖库
+该文件导入了以下依赖库：
+ - pickle：用于读取和写入 pickle 文件
+ - numpy：用于处理数组和矩阵的库
+ - gensim.models.KeyedVectors：用于加载和保存词向量模型
+ - 
+#### 2.6.3. 类和方法说明
+- trans_bin(word_path,bin_path):词向量文件保存成bin文件。word_pathb表示词向量文件路径,bin_path表示bin文件路径。
+- get_new_dict(type_vec_path,type_word_path,final_vec_path,final_word_path):构建新的词典和词向量矩阵。type_vec_path表示原词典文件路径,type_word_path表示原词向量矩阵文件路径,final_vec_path表示新词典文件保存路径,final_word_path表示新词向量文件保存路径。
+- get_index(type,text,word_dict):得到词在词典中的位置。type表示词的类型,text表示词,word_dict表示词典。
+- Serialization(word_dict_path,type_path,final_type_path):将训练、测试、验证语料序列化。
+- get_new_dict_append(type_vec_path,previous_dict,previous_vec,append_word_path,final_vec_path,final_word_path):将文件append_word_path中包含的新词添加到词典中，并在原有的词向量词表中按顺序添加相应的词向量。函数会先加载类型为word2vec的词标签及其对应的词向量。
+type_vec_path表示词标签、词向量文件路径，
+previous_dict表示原始词典文件路径，
+previous_vec表示原始词向量文件路径，
+append_word_path表示需要添加的词的文件路径，
+final_vec_path表示最终词向量文件路径，
+final_word_path表示最终词典文件路径。
 ---
 ### 2.7. run.py文件
 #### 1. 概述
-  把语料中的单候选和多候选分隔开
+  从大词典中获取特定于于语料的词典；将数据处理成待打标签的形式
 #### 2.7.2. 导入依赖库
 该文件导入了以下依赖库：
  - import pickle：用于读取和写入 pickle 文件
