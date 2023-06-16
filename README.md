@@ -78,8 +78,8 @@
 - get_vars(ast_root)：获取变量名。ast_root表示ast语法树名。
 - get_all_vars(code):一个具有启发式的解析器，旨在从 code 字符串中尽可能多地提取变量名。code表示输入的io数据。
 
-- PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。code表示输入的io数据。
-- └──first_trial(_code):尝试将该代码字符串解析为token令牌序列。code表示输入的io数据。
+- PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。code表示输入的io数据。  
+ └──first_trial(_code):尝试将该代码字符串解析为token令牌序列。code表示输入的io数据。
 
 - revert_abbrev(line):缩略词处理，将常见的英语缩写还原为它们的原始形式。line表示需要处理的文本。
 - get_word_pos(tag):获取词性。
