@@ -36,8 +36,8 @@
   把语料中的单候选和多候选分隔开
 #### 2. 导入依赖库
 该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
- - from collections import Counter： ：用于计数数据中元素的频率
+ - pickle：用于读取和写入 pickle 文件
+ - Counter： ：用于计数数据中元素的频率
 
 #### 3. 类和方法说明
 
@@ -51,7 +51,7 @@
   构建语料词典
 #### 2. 导入依赖库
 该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
+ - pickle：用于读取和写入 pickle 文件
 
 #### 3. 类和方法说明
 
@@ -62,26 +62,71 @@
 - final_vocab_prpcessing(filepath1,filepath2,save_path):最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。filepath1表示第一个文本语料的路径,filepath2表示第二个文本语料的路径,save_path表示生成的文本的保存路径。
 ---
 ### python_structured.py文件
-### sqlang_structured.py文件
-### getStru2Vec.py文件
-### embaddings_process.py文件
-### run.py文件
-
 #### 1. 概述
-
+  解析 Python 代码，修复代码中的变量命名问题；
+  代码重构，添加变量名的注释。
 #### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - re：用于正则表达式匹配和替换
+ - ast:
+ - sys:
+ - token 和 tokenize：用于解析 Python 代码中的 token
+ - io.StringIO：用于在内存中操作字符串作为文件
+ - inflection：用于进行单词的单复数转换
+ - nltk：自然语言处理工具包，用于词性标注、分词和词形还原
 
 #### 3. 类和方法说明
 
-##### 3.1. 类 
+###### 方法
+---
+### sqlang_structured.py文件
+#### 1. 概述
+  把语料中的单候选和多候选分隔开
+#### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - import pickle：用于读取和写入 pickle 文件
+ - from collections import Counter： ：用于计数数据中元素的频率
 
-###### 属性
+#### 3. 类和方法说明
 
 ###### 方法
+---
+### getStru2Vec.py文件
+#### 1. 概述
+  把语料中的单候选和多候选分隔开
+#### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - import pickle：用于读取和写入 pickle 文件
+ - from collections import Counter： ：用于计数数据中元素的频率
 
+#### 3. 类和方法说明
 
-#### 4. 示例运行
+###### 方法
+---
+### embaddings_process.py文件
+#### 1. 概述
+  把语料中的单候选和多候选分隔开
+#### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - import pickle：用于读取和写入 pickle 文件
+ - from collections import Counter： ：用于计数数据中元素的频率
 
+#### 3. 类和方法说明
+
+###### 方法
+---
+### run.py文件
+#### 1. 概述
+  把语料中的单候选和多候选分隔开
+#### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - import pickle：用于读取和写入 pickle 文件
+ - from collections import Counter： ：用于计数数据中元素的频率
+
+#### 3. 类和方法说明
+
+###### 方法
+---
 
 
 ## 三、总结
