@@ -12,6 +12,11 @@
 │        └── python_structured.py
 │        └── sqlang_structured.py
 │        └── word_dirt.py
-└── ANN_Staqc_new 
+└── ANN_Staqc_new
+1. 项目1
+2. 项目2
+* 项目1 （一个*号会显示为一个黑点，注意⚠️有空格，否则直接显示为*项目1）
+* 项目2
+* * 项目3
 ## 三、总结
 
