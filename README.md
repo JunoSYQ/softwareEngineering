@@ -16,7 +16,7 @@
 ## 一、项目描述
   此项目的python文件是对文本数据进行预测处理。通过给出python文件，对文件进行代码代码规范调试
 ## 二、项目结构文件说明
-结构说明：
+### 结构说明：
 ```
 ├── hnn_preprocessing  
 │   └── embaddings_process.py  
@@ -28,7 +28,30 @@
 |   └── run.py
 
 ```
+### 文件说明
 
+### process_single_corpus.py文件
+### word_dirt.py文件
+### python_structured.py文件
+### sqlang_structured.py文件
+### getStru2Vec.py文件
+### embaddings_process.py文件
+### run.py文件
+
+#### 1. 概述
+
+#### 2. 导入依赖库
+
+#### 3. 类和方法说明
+
+##### 3.1. 类 
+
+###### 属性
+
+###### 方法
+
+
+#### 4. 示例运行
 
 
 
