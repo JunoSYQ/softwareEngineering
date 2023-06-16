@@ -4,7 +4,7 @@
 ## 目录
 - [一、项目描述](#一项目描述)
 - [二、项目结构文件说明](#二项目结构文件说明)
-  - [2.1. process_single_corpus.py文件](#2.1.process_single_corpuspy文件)
+  - [2.1 process_single_corpus.py文件](#2.1 process_single_corpuspy文件)
   - [2.2 word_dict.py文件](#word_dictpy文件)
   - [2.3 python_structured.py文件](#python_structuredpy文件)
   - [2.4 sql_structured.py文件](#sql_structuredpy文件)
@@ -30,7 +30,7 @@
 ```
 ### 文件说明
 
-### 2.1.process_single_corpus.py文件
+### 2.1 process_single_corpus.py文件
 
 #### 2.1.1. 概述
   把语料中的单候选和多候选分隔开
@@ -45,7 +45,7 @@
 - `single_list(arr, target)`：计算一个列表中指定元素的出现次数。arr为
 - `data_staqc_prpcessing(filepath,single_path,mutiple_path)`:把语料中的单候选和多候选分隔开。
 ---
-### 2.2. word_dirt.py文件
+### 2.2 word_dirt.py文件
 #### 2.2.1. 概述
   构建语料词典
 #### 2.2.2. 导入依赖库
@@ -59,7 +59,7 @@
 - `vocab_prpcessing(filepath1,filepath2,save_path)`：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。
 - `final_vocab_prpcessing(filepath1,filepath2,save_path)`:最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。
 ---
-### 2.3. python_structured.py文件
+### 2.3 python_structured.py文件
 #### 2.3.1. 概述
   解析 Python 代码，修复代码中的变量命名问题；
   代码重构，添加变量名的注释。
@@ -90,7 +90,7 @@
 - `python_all_context_parse(line)`:将提供的文本进行标准化和归一化处理,除去所有特殊字符。
 - `python_part_context_parse(line)`:将提供的文本进行标准化和归一化处理,除去部分特殊字符。
 ---
-### 2.4. sql_structured.py文件
+### 2.4 sql_structured.py文件
 #### 2.4.1. 概述
   解析 SQL 代码，修复代码中的变量命名问题；
   代码重构，添加变量名的注释。
@@ -131,7 +131,7 @@
 - `sqlpart_context_parse(line)`:将提供的文本进行标准化和归一化处理,除去部分特殊字符。
 
 ---
-### 2.5. getStru2Vec.py文件
+### 2.5 getStru2Vec.py文件
 #### 2.5.1. 概述
   获取最终的python解析文本和SQL解析文本。
 #### 2.5.2. 导入依赖库
@@ -154,7 +154,7 @@
 - `main(lang_type,split_num,source_path,save_path)`:将两个版本的解析集合到一个函数中，并保存解析结果。
 - `test(path1,path2)`:测试文件是否保存成功。
 ---
-### 2.6. embaddings_process.py文件
+### 2.6 embaddings_process.py文件
 #### 2.6.1. 概述
   从大词典中获取特定于于语料的词典；将数据处理成待打标签的形式
 #### 2.6.2. 导入依赖库
@@ -169,7 +169,7 @@
 - `get_index(type,text,word_dict)`:得到词在词典中的位置。
 - `Serialization(word_dict_path,type_path,final_type_path)`:将训练、测试、验证语料序列化。
 - `get_new_dict_append(type_vec_path,previous_dict,previous_vec,append_word_path,final_vec_path,final_word_path)`:将文件`append_word_path`中包含的新词添加到词典中，并在原有的词向量词表中按顺序添加相应的词向量。函数会先加载类型为`word2vec`的词标签及其对应的词向量。
-### 2.7. run.py文件
+### 2.7 run.py文件
 #### 1. 概述
   运行上述的python代码，进行文本数据处理。
 #### 2.7.2. 导入依赖库
