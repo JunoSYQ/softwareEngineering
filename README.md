@@ -7,7 +7,7 @@
   - [2.1 process_single_corpus.py文件](#process_single_corpuspy文件)
   - [2.2 word_dict.py文件](#word_dictpy文件)
   - [2.3 python_structured.py文件](#python_structuredpy文件)
-  - [2.4 sqlang_structured.py文件](#sqlang_structuredpy文件)
+  - [2.4 sql_structured.py文件](#sql_structuredpy文件)
   - [2.5 getSru2Vec.py文件](#getsru2vecpy文件)
   - [2.6 embddings_process.py文件](#embddings_processpy文件)
   - [2.7 run.py文件](#runpy文件)
