@@ -4,7 +4,7 @@
 ## 目录
 - [一、项目描述](#一项目描述)
 - [二、项目结构文件说明](#二项目结构文件说明)
-  - [2.1 process_single_corpus.py文件](#2.1.process_single_corpuspy文件)
+  - [2.1 process_single_corpus.py文件](#2.1. process_single_corpuspy文件)
   - [2.2 word_dict.py文件](#word_dictpy文件)
   - [2.3 python_structured.py文件](#python_structuredpy文件)
   - [2.4 sql_structured.py文件](#sql_structuredpy文件)
