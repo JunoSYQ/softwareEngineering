@@ -68,8 +68,8 @@
 #### 2. 导入依赖库
 该文件导入了以下依赖库：
  - re：用于正则表达式匹配和替换
- - ast:
- - sys:
+ - ast:用于处理Python代码抽象语法树
+ - sys:用于程序与解释器交互
  - token 和 tokenize：用于解析 Python 代码中的 token
  - io.StringIO：用于在内存中操作字符串作为文件
  - inflection：用于进行单词的单复数转换
@@ -78,14 +78,24 @@
 #### 3. 类和方法说明
 
 ###### 方法
+- format_io(code):修复 Python 程序中的标准输入/输出（I/O）格式。code表示输入的io数据。
+- get_vars(ast_root)：获取变量名。ast_root表示ast语法树名。
+- get_all_vars(code):一个具有启发式的解析器，旨在从 code 字符串中尽可能多地提取变量名。code表示输入的io数据。
+```
+├── PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。code表示输入的io数据。
+│   └── first_trial(_code):尝试将该代码字符串解析为token令牌序列。code表示输入的io数据。
+
+
+```
+ 
 ---
 ### sqlang_structured.py文件
 #### 1. 概述
   把语料中的单候选和多候选分隔开
 #### 2. 导入依赖库
 该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
- - from collections import Counter： ：用于计数数据中元素的频率
+ - pickle：用于读取和写入 pickle 文件
+ - collections.Counter： ：用于计数数据中元素的频率
 
 #### 3. 类和方法说明
 
@@ -97,7 +107,7 @@
 #### 2. 导入依赖库
 该文件导入了以下依赖库：
  - import pickle：用于读取和写入 pickle 文件
- - from collections import Counter： ：用于计数数据中元素的频率
+ - collections.Counter： ：用于计数数据中元素的频率
 
 #### 3. 类和方法说明
 
