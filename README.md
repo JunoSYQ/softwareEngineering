@@ -41,9 +41,9 @@
 
 #### 2.1.3. 类和方法说明
 
-- load_pickle(filename)：读取pickle二进制文件。filename为文件路径
-- single_list(arr, target)：计算一个列表中指定元素的出现次数。arr为列表，target为指定的元素
-- data_staqc_prpcessing(filepath,single_path,mutiple_path):把语料中的单候选和多候选分隔开。filepath表示源文件路径，single_path为单候选文件的保存地址，mutiple_path为多候选文件的保存地址。
+- load_pickle(filename)：读取pickle二进制文件。
+- single_list(arr, target)：计算一个列表中指定元素的出现次数。arr为
+- data_staqc_prpcessing(filepath,single_path,mutiple_path):把语料中的单候选和多候选分隔开。
 ---
 ### 2.2. word_dirt.py文件
 #### 2.2.1. 概述
@@ -54,10 +54,10 @@
 
 #### 2.2.3. 类和方法说明
 
-- load_pickle(filename)：读取pickle二进制文件。filename为文件路径
-- get_vocab(corpus1, corpus2)：构建初步词典的具体步骤1，查找两个文本语料库中的单词并生成词汇表。corpus1表示第一个文本语料的路径，corpus2表示第二个文本语料的路径。
-- vocab_prpcessing(filepath1,filepath2,save_path)：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。filepath1表示第一个文本语料的路径,filepath2表示第二个文本语料的路径,save_path表示生成的文本的保存路径。
-- final_vocab_prpcessing(filepath1,filepath2,save_path):最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。filepath1表示第一个文本语料的路径,filepath2表示第二个文本语料的路径,save_path表示生成的文本的保存路径。
+- load_pickle(filename)：读取pickle二进制文件。
+- get_vocab(filepath1, filepath2)：构建初步词典的具体步骤1，查找两个文本语料库中的单词并生成词汇表。
+- vocab_prpcessing(filepath1,filepath2,save_path)：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。
+- final_vocab_prpcessing(filepath1,filepath2,save_path):最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。
 ---
 ### 2.3. python_structured.py文件
 #### 2.3.1. 概述
@@ -74,22 +74,21 @@
  - nltk：自然语言处理工具包，用于词性标注、分词和词形还原
 
 #### 2.3.3. 类和方法说明
-- format_io(code):修复 Python 程序中的标准输入/输出（I/O）格式。code表示输入的io数据。
-- get_vars(ast_root)：获取变量名。ast_root表示ast语法树名。
-- get_all_vars(code):一个具有启发式的解析器，旨在从 code 字符串中尽可能多地提取变量名。code表示输入的io数据。
+- format_io(code):修复 Python 程序中的标准输入/输出（I/O）格式。
+- get_vars(ast_root)：获取变量名。
+- get_all_vars(code):一个具有启发式的解析器，旨在从 code 字符串中尽可能多地提取变量名。
+- PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。
+ └──first_trial(_code):尝试将该代码字符串解析为token令牌序列。
 
-- PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。code表示输入的io数据。  
- └──first_trial(_code):尝试将该代码字符串解析为token令牌序列。code表示输入的io数据。
-
-- revert_abbrev(line):缩略词处理，将常见的英语缩写还原为它们的原始形式。line表示需要处理的文本。
+- revert_abbrev(line):缩略词处理，将常见的英语缩写还原为它们的原始形式。
 - get_word_pos(tag):获取词性。
-- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。line表示需要处理的文本。
-- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。line表示需要处理的文本。
-- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。line表示需要处理的文本。
-- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。line表示需要处理的文本。
-- python_query_parse(line):解析 python 查询语句，进行文本预处理。line表示需要处理的文本。
-- python_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。line表示需要处理的文本。
-- python_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
+- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。
+- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。
+- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。
+- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。
+- python_query_parse(line):解析 python 查询语句，进行文本预处理。
+- python_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。
+- python_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。
 ---
 ### 2.4. sql_structured.py文件
 #### 2.4.1. 概述
@@ -106,7 +105,7 @@
 
 #### 2.4.3. 类和方法说明
 
-- string_scanner(s):扫描字符串。s表示字符串。
+- string_scanner(s):扫描字符串。
 - SqlParser(): SQL语句处理。  
    └──formatSql(sql):对输入的SQL语句进行清理和标准化。  
    └──parseStringsTokens(self, tok):将输入的SQL解析为一个SQL令牌列表,并对其进行处理。    
@@ -121,15 +120,15 @@
    └──identifyTables(self, tokenList):标识SQL语句中的表（table）与列（column），并在token的ttype属性中记录信息来标识识别的结果。    
    └──__str__(self):将SQL语句的tokens列表中的所有token连接成一个字符串。  
    └──parseSql(self):返回SQL语句中所有token的字符串列表。
-- revert_abbrev(line):缩略词处理。line表示待处理的文本。
+- revert_abbrev(line):缩略词处理。
 - get_word_pos(tag):获取词性。
-- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。line表示需要处理的文本。
-- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。line表示需要处理的文本。
-- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。line表示需要处理的文本。
-- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。line表示需要处理的文本。
-- sql_query_parse(line):解析 python 查询语句，进行文本预处理。line表示需要处理的文本。
-- sql_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。line表示需要处理的文本。
-- sql_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
+- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。
+- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。
+- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。
+- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。
+- sql_query_parse(line):解析 python 查询语句，进行文本预处理。
+- sql_all_context_parse(line):根据上下文，将提供的文本进行标准化和归一化处理,除去所有特殊字符。。
+- sql_part_context_parse(line):根据上下文，将提供的文本进行标准化和归一化处理,除去部分特殊字符。
 
 ---
 ### 2.5. getStru2Vec.py文件
@@ -165,27 +164,23 @@
  - gensim.models.KeyedVectors：用于加载和保存词向量模型
  - 
 #### 2.6.3. 类和方法说明
-- trans_bin(word_path,bin_path):词向量文件保存成bin文件。word_pathb表示词向量文件路径,bin_path表示bin文件路径。
-- get_new_dict(type_vec_path,type_word_path,final_vec_path,final_word_path):构建新的词典和词向量矩阵。type_vec_path表示原词典文件路径,type_word_path表示原词向量矩阵文件路径,final_vec_path表示新词典文件保存路径,final_word_path表示新词向量文件保存路径。
-- get_index(type,text,word_dict):得到词在词典中的位置。type表示词的类型,text表示词,word_dict表示词典。
+- trans_bin(word_path,bin_path):词向量文件保存成bin文件。t
+- get_new_dict(type_vec_path,type_word_path,final_vec_path,final_word_path):构建新的词典和词向量矩阵。
+- get_index(type,text,word_dict):得到词在词典中的位置。
 - Serialization(word_dict_path,type_path,final_type_path):将训练、测试、验证语料序列化。
 - get_new_dict_append(type_vec_path,previous_dict,previous_vec,append_word_path,final_vec_path,final_word_path):将文件append_word_path中包含的新词添加到词典中，并在原有的词向量词表中按顺序添加相应的词向量。函数会先加载类型为word2vec的词标签及其对应的词向量。
-type_vec_path表示词标签、词向量文件路径，
-previous_dict表示原始词典文件路径，
-previous_vec表示原始词向量文件路径，
-append_word_path表示需要添加的词的文件路径，
-final_vec_path表示最终词向量文件路径，
-final_word_path表示最终词典文件路径。
----
 ### 2.7. run.py文件
 #### 1. 概述
-  从大词典中获取特定于于语料的词典；将数据处理成待打标签的形式
+  运行上述的python代码，进行文本数据处理。
 #### 2.7.2. 导入依赖库
 该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
- - from collections import Counter： ：用于计数数据中元素的频率
+- process_single_corpus.py文件的所有函数
+- word_dict.py文件的所有函数
+- getStru2Vec.py文件的所有函数
+- embddings_process.py文件的所有函数
 
 #### 2.7.3. 类和方法说明
+
 ---
 
 
