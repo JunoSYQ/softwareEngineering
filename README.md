@@ -106,22 +106,22 @@
 
 #### 3. 类和方法说明
 
-```
-├── SqlParser(): SQL语句处理。
-│   └──formatSql(sql):对输入的SQL语句进行清理和标准化。
-│   └──parseStringsTokens(self, tok):将输入的SQL解析为一个SQL令牌列表,并对其进行处理
-│   └──renameIdentifiers(self, tok):重命名 SQL 语句中的标识符。
-│   └── __hash__(self):将 SQL 解析器对象哈希化。
-│   └──_init__(self, sql, regex=False, rename=True):初始化。
-│   └──getTokens(parse):获取令牌序列
-│   └── removeWhitespaces(self, tok):删除多余空格。
-│   └──identifySubQueries(self, tokenList):识别 SQL 表达式中的子查询。
-│   └──identifyLiterals(self, tokenList):用于标识 SQL 解析器对象中的不同类型的文本字面量。
-│   └──identifyFunctions(self, tokenList):从给定的token列表中识别SQL语句中的函数并设置ttype类型。
-│   └──identifyTables(self, tokenList):
-│   └──__str__(self):
-│   └──parseSql(self):
-```
+
+- SqlParser(): SQL语句处理。
+   └──formatSql(sql):对输入的SQL语句进行清理和标准化。
+   └──parseStringsTokens(self, tok):将输入的SQL解析为一个SQL令牌列表,并对其进行处理
+   └──renameIdentifiers(self, tok):重命名 SQL 语句中的标识符。
+   └── __hash__(self):将 SQL 解析器对象哈希化。
+   └──_init__(self, sql, regex=False, rename=True):初始化。
+   └──getTokens(parse):获取令牌序列
+   └── removeWhitespaces(self, tok):删除多余空格。
+   └──identifySubQueries(self, tokenList):识别 SQL 表达式中的子查询。
+   └──identifyLiterals(self, tokenList):用于标识 SQL 解析器对象中的不同类型的文本字面量。
+   └──identifyFunctions(self, tokenList):从给定的token列表中识别SQL语句中的函数并设置ttype类型。
+   └──identifyTables(self, tokenList):
+   └──__str__(self):
+   └──parseSql(self):
+
 ---
 ### getStru2Vec.py文件
 #### 1. 概述
