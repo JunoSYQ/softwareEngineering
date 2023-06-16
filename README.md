@@ -30,34 +30,34 @@
 ```
 ### 文件说明
 
-### 2.1. process_single_corpus.py文件
+### 2.1. `process_single_corpus.py`文件
 
 #### 2.1.1. 概述
   把语料中的单候选和多候选分隔开
 #### 2.1.2. 导入依赖库
 该文件导入了以下依赖库：
- - 'pickle'：用于读取和写入 pickle 文件
- - 'Counter'： ：用于计数数据中元素的频率
+ - pickle：用于读取和写入 pickle 文件
+ - Counter： ：用于计数数据中元素的频率
 
 #### 2.1.3. 类和方法说明
 
-- 'load_pickle(filename)'：读取pickle二进制文件。
-- 'single_list(arr, target)'：计算一个列表中指定元素的出现次数。arr为
-- 'data_staqc_prpcessing(filepath,single_path,mutiple_path)':把语料中的单候选和多候选分隔开。
+- load_pickle(filename)：读取pickle二进制文件。
+- single_list(arr, target)：计算一个列表中指定元素的出现次数。arr为
+- data_staqc_prpcessing(filepath,single_path,mutiple_path):把语料中的单候选和多候选分隔开。
 ---
 ### 2.2. word_dirt.py文件
 #### 2.2.1. 概述
   构建语料词典
 #### 2.2.2. 导入依赖库
 该文件导入了以下依赖库：
- - 'pickle'：用于读取和写入 pickle 文件
+ - pickle：用于读取和写入 pickle 文件
 
 #### 2.2.3. 类和方法说明
 
-- 'load_pickle(filename)'：读取pickle二进制文件。
-- 'get_vocab(filepath1, filepath2)'：构建初步词典的具体步骤1，查找两个文本语料库中的单词并生成词汇表。
-- 'vocab_prpcessing(filepath1,filepath2,save_path)'：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。
-- 'final_vocab_prpcessing(filepath1,filepath2,save_path)':最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。
+- load_pickle(filename)：读取pickle二进制文件。
+- get_vocab(filepath1, filepath2)：构建初步词典的具体步骤1，查找两个文本语料库中的单词并生成词汇表。
+- vocab_prpcessing(filepath1,filepath2,save_path)：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。
+- final_vocab_prpcessing(filepath1,filepath2,save_path):最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。
 ---
 ### 2.3. python_structured.py文件
 #### 2.3.1. 概述
@@ -65,10 +65,10 @@
   代码重构，添加变量名的注释。
 #### 2.3.2. 导入依赖库
 该文件导入了以下依赖库：
- - 're'：用于正则表达式匹配和替换
- - 'ast':用于处理Python代码抽象语法树
- - 'sys':用于程序与解释器交互
- - 'token' 和 'tokenize'：用于解析 Python 代码中的 token
+ - re：用于正则表达式匹配和替换
+ - ast:用于处理Python代码抽象语法树
+ - sys:用于程序与解释器交互
+ - token和 tokenize：用于解析 Python 代码中的 token
  - io.StringIO：用于在内存中操作字符串作为文件
  - inflection：用于进行单词的单复数转换
  - nltk：自然语言处理工具包，用于词性标注、分词和词形还原
