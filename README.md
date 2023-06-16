@@ -33,8 +33,11 @@
 ### process_single_corpus.py文件
 
 #### 1. 概述
-
+  把语料中的单候选和多候选分隔开
 #### 2. 导入依赖库
+该文件导入了以下依赖库：
+ - import pickle
+ -from collections import Counter
 
 #### 3. 类和方法说明
 
