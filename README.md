@@ -84,10 +84,16 @@
 ```
 ├── PythonParser(code): 将代码字符串解析为Token 序列，并且执行变量解析。code表示输入的io数据。
 │   └── first_trial(_code):尝试将该代码字符串解析为token令牌序列。code表示输入的io数据。
-
-
 ```
- 
+- revert_abbrev(line):缩略词处理，将常见的英语缩写还原为它们的原始形式。line表示需要处理的文本。
+- get_word_pos(tag):获取词性。
+- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。line表示需要处理的文本。
+- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。line表示需要处理的文本。
+- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。line表示需要处理的文本。
+- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。line表示需要处理的文本。
+- python_query_parse(line):解析 python 查询语句，进行文本预处理。line表示需要处理的文本。
+- python_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。line表示需要处理的文本。
+- python_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
 ---
 ### sqlang_structured.py文件
 #### 1. 概述
