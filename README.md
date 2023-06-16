@@ -164,20 +164,20 @@
  - `gensim.models.KeyedVectors`：用于加载和保存词向量模型
 
 #### 2.6.3. 类和方法说明
-- trans_bin(word_path,bin_path):词向量文件保存成bin文件。t
-- get_new_dict(type_vec_path,type_word_path,final_vec_path,final_word_path):构建新的词典和词向量矩阵。
-- get_index(type,text,word_dict):得到词在词典中的位置。
-- Serialization(word_dict_path,type_path,final_type_path):将训练、测试、验证语料序列化。
-- get_new_dict_append(type_vec_path,previous_dict,previous_vec,append_word_path,final_vec_path,final_word_path):将文件append_word_path中包含的新词添加到词典中，并在原有的词向量词表中按顺序添加相应的词向量。函数会先加载类型为word2vec的词标签及其对应的词向量。
+- `trans_bin(word_path,bin_path)`:词向量文件保存成bin文件。t
+- `get_new_dict(type_vec_path,type_word_path,final_vec_path,final_word_path)`:构建新的词典和词向量矩阵。
+- `get_index(type,text,word_dict)`:得到词在词典中的位置。
+- `Serialization(word_dict_path,type_path,final_type_path)`:将训练、测试、验证语料序列化。
+- `get_new_dict_append(type_vec_path,previous_dict,previous_vec,append_word_path,final_vec_path,final_word_path)`:将文件`append_word_path`中包含的新词添加到词典中，并在原有的词向量词表中按顺序添加相应的词向量。函数会先加载类型为`word2vec`的词标签及其对应的词向量。
 ### 2.7. run.py文件
 #### 1. 概述
   运行上述的python代码，进行文本数据处理。
 #### 2.7.2. 导入依赖库
 该文件导入了以下依赖库：
-- process_single_corpus.py文件的所有函数
-- word_dict.py文件的所有函数
-- getStru2Vec.py文件的所有函数
-- embddings_process.py文件的所有函数
+- `process_single_corpus.py`文件的所有函数
+- `word_dict.py`文件的所有函数
+- `getStru2Vec.py`文件的所有函数
+- `embddings_process.py`文件的所有函数
 
 #### 2.7.3. 类和方法说明
 
