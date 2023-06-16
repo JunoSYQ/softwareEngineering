@@ -31,6 +31,22 @@
 ### 文件说明
 
 ### process_single_corpus.py文件
+
+#### 1. 概述
+
+#### 2. 导入依赖库
+
+#### 3. 类和方法说明
+
+##### 3.1. 类 
+
+###### 属性
+
+###### 方法
+
+---
+
+#### 4. 示例运行
 ### word_dirt.py文件
 ### python_structured.py文件
 ### sqlang_structured.py文件
