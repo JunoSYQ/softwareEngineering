@@ -111,7 +111,7 @@
    └──formatSql(sql):对输入的SQL语句进行清理和标准化。  
    └──parseStringsTokens(self, tok):将输入的SQL解析为一个SQL令牌列表,并对其进行处理。    
    └──renameIdentifiers(self, tok):重命名 SQL 语句中的标识符。  
-   └── __hash__(self):将 SQL 解析器对象哈希化。  
+   └── _hash_(self):将 SQL 解析器对象哈希化。  
    └──_init__(self, sql, regex=False, rename=True):初始化。  
    └──getTokens(parse):获取令牌序列。  
    └── removeWhitespaces(self, tok):删除多余空格。  
