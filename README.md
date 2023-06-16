@@ -4,12 +4,12 @@
 ## 目录
 - [一、项目描述](#一项目描述)
 - [二、项目结构文件说明](#二项目结构文件说明)
-  - [2.1 getSru2Vec.py文件](#getsru2vecpy文件)
-  - [2.2 embddings_process.py文件](#embddings_processpy文件)
-  - [2.3 process_single_corpus.py文件](#process_single_corpuspy文件)
-  - [2.4 python_structured.py文件](#python_structuredpy文件)
-  - [2.5 sqlang_structured.py文件](#sqlang_structuredpy文件)
-  - [2.6 word_dict.py文件](#word_dictpy文件)
+  - [2.1 process_single_corpus.py文件](#process_single_corpuspy文件)
+  - [2.2 word_dict.py文件](#word_dictpy文件)
+  - [2.3 python_structured.py文件](#python_structuredpy文件)
+  - [2.4 sqlang_structured.py文件](#sqlang_structuredpy文件)
+  - [2.5 getSru2Vec.py文件](#getsru2vecpy文件)
+  - [2.6 embddings_process.py文件](#embddings_processpy文件)
   - [2.7 run.py文件](#runpy文件)
 - [三、总结](#三总结)
 
@@ -30,40 +30,40 @@
 ```
 ### 文件说明
 
-### process_single_corpus.py文件
+### 2.1. process_single_corpus.py文件
 
-#### 1. 概述
+#### 2.1.1. 概述
   把语料中的单候选和多候选分隔开
-#### 2. 导入依赖库
+#### 2.1.2. 导入依赖库
 该文件导入了以下依赖库：
  - pickle：用于读取和写入 pickle 文件
  - Counter： ：用于计数数据中元素的频率
 
-#### 3. 类和方法说明
+#### 2.1.3. 类和方法说明
 
 - load_pickle(filename)：读取pickle二进制文件。filename为文件路径
 - single_list(arr, target)：计算一个列表中指定元素的出现次数。arr为列表，target为指定的元素
 - data_staqc_prpcessing(filepath,single_path,mutiple_path):把语料中的单候选和多候选分隔开。filepath表示源文件路径，single_path为单候选文件的保存地址，mutiple_path为多候选文件的保存地址。
 ---
-### word_dirt.py文件
-#### 1. 概述
+### 2.2. word_dirt.py文件
+#### 2.2.1. 概述
   构建语料词典
-#### 2. 导入依赖库
+#### 2.2.2. 导入依赖库
 该文件导入了以下依赖库：
  - pickle：用于读取和写入 pickle 文件
 
-#### 3. 类和方法说明
+#### 2.2.3. 类和方法说明
 
 - load_pickle(filename)：读取pickle二进制文件。filename为文件路径
 - get_vocab(corpus1, corpus2)：构建初步词典的具体步骤1，查找两个文本语料库中的单词并生成词汇表。corpus1表示第一个文本语料的路径，corpus2表示第二个文本语料的路径。
 - vocab_prpcessing(filepath1,filepath2,save_path)：构建初步词典，从两个文本数据集中获取全部出现过的单词，并将单词保存到文件中。filepath1表示第一个文本语料的路径,filepath2表示第二个文本语料的路径,save_path表示生成的文本的保存路径。
 - final_vocab_prpcessing(filepath1,filepath2,save_path):最终构建的词典，获取两个文本数据集中出现的单词的集合，并且仅返回在第二个数据集中出现过而未在第一个数据集中出现过的单词的集合。filepath1表示第一个文本语料的路径,filepath2表示第二个文本语料的路径,save_path表示生成的文本的保存路径。
 ---
-### python_structured.py文件
-#### 1. 概述
+### 2.3. python_structured.py文件
+#### 2.3.1. 概述
   解析 Python 代码，修复代码中的变量命名问题；
   代码重构，添加变量名的注释。
-#### 2. 导入依赖库
+#### 2.3.2. 导入依赖库
 该文件导入了以下依赖库：
  - re：用于正则表达式匹配和替换
  - ast:用于处理Python代码抽象语法树
@@ -73,7 +73,7 @@
  - inflection：用于进行单词的单复数转换
  - nltk：自然语言处理工具包，用于词性标注、分词和词形还原
 
-#### 3. 类和方法说明
+#### 2.3.3. 类和方法说明
 - format_io(code):修复 Python 程序中的标准输入/输出（I/O）格式。code表示输入的io数据。
 - get_vars(ast_root)：获取变量名。ast_root表示ast语法树名。
 - get_all_vars(code):一个具有启发式的解析器，旨在从 code 字符串中尽可能多地提取变量名。code表示输入的io数据。
@@ -91,11 +91,11 @@
 - python_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。line表示需要处理的文本。
 - python_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
 ---
-### sql_structured.py文件
-#### 1. 概述
+### 2.4. sql_structured.py文件
+#### 2.4.1. 概述
   解析 SQL 代码，修复代码中的变量命名问题；
   代码重构，添加变量名的注释。
-#### 2. 导入依赖库
+#### 2.4.2. 导入依赖库
 该文件导入了以下依赖库:
  - re：用于正则表达式匹配和替换
  - ast:用于处理Python代码抽象语法树
@@ -104,7 +104,7 @@
  - inflection：用于进行单词的单复数转换
  - nltk：自然语言处理工具包，用于词性标注、分词和词形还原
 
-#### 3. 类和方法说明
+#### 2.4.3. 类和方法说明
 
 - string_scanner(s):扫描字符串。s表示字符串。
 - SqlParser(): SQL语句处理。  
@@ -132,41 +132,50 @@
 - sql_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
 
 ---
-### getStru2Vec.py文件
-#### 1. 概述
-  把语料中的单候选和多候选分隔开
-#### 2. 导入依赖库
+### 2.5. getStru2Vec.py文件
+#### 2.5.1. 概述
+  获取最终的python解析文本和SQL解析文本。
+#### 2.5.2. 导入依赖库
 该文件导入了以下依赖库：
- - import pickle：用于读取和写入 pickle 文件
- - collections.Counter： ：用于计数数据中元素的频率
+ - pickle：用于读取和写入 pickle 文件
+ - sys:用于程序与解释器交互
+ - python_structured.py文件中的所有函数
+ - sql_structured.py文件中的所有函数
+ - multiprocessing.Pool：用于多进程处理
 
-#### 3. 类和方法说明
+#### 2.5.3. 类和方法说明
 
-###### 方法
 ---
-### embaddings_process.py文件
-#### 1. 概述
+### 2.6. embaddings_process.py文件
+#### 2.6.1. 概述
   把语料中的单候选和多候选分隔开
-#### 2. 导入依赖库
+#### 2.6.2. 导入依赖库
 该文件导入了以下依赖库：
  - import pickle：用于读取和写入 pickle 文件
  - from collections import Counter： ：用于计数数据中元素的频率
 
-#### 3. 类和方法说明
+#### 2.6.3. 类和方法说明
+- multipro_python_query(data_list):Python 查询解析方法。
+- multipro_python_code(data_list):Python 代码解析方法。
+- multipro_python_context(data_list):Python 上下文解析方法。
+- multipro_sql_query(data_list):SQL查询解析方法。
+- multipro_sql_code(data_list):SQL代码解析方法。
+- multipro_sql_context(data_list):SQL上下文解析方法。
+- python_parse_final(python_list,split_num):最终的python版解析函数。
+- sql_parse_final(sql_list,split_num):最终的sql版解析函数。
+- main(lang_type,split_num,source_path,save_path):将两个版本的解析集合到一个函数中，并保存解析结果。
 
 ###### 方法
 ---
-### run.py文件
+### 2.7. run.py文件
 #### 1. 概述
   把语料中的单候选和多候选分隔开
-#### 2. 导入依赖库
+#### 2.7.2. 导入依赖库
 该文件导入了以下依赖库：
  - import pickle：用于读取和写入 pickle 文件
  - from collections import Counter： ：用于计数数据中元素的频率
 
-#### 3. 类和方法说明
-
-###### 方法
+#### 2.7.3. 类和方法说明
 ---
 
 
