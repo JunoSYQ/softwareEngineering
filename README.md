@@ -106,7 +106,7 @@
 
 #### 3. 类和方法说明
 
-
+- string_scanner(s):扫描字符串。s表示字符串。
 - SqlParser(): SQL语句处理。  
    └──formatSql(sql):对输入的SQL语句进行清理和标准化。  
    └──parseStringsTokens(self, tok):将输入的SQL解析为一个SQL令牌列表,并对其进行处理。    
@@ -120,7 +120,16 @@
    └──identifyFunctions(self, tokenList):从给定的token列表中识别SQL语句中的函数并设置ttype类型。  
    └──identifyTables(self, tokenList):标识SQL语句中的表（table）与列（column），并在token的ttype属性中记录信息来标识识别的结果。    
    └──__str__(self):将SQL语句的tokens列表中的所有token连接成一个字符串。  
-   └──parseSql(self):返回SQL语句中所有token的字符串列表。  
+   └──parseSql(self):返回SQL语句中所有token的字符串列表。
+- revert_abbrev(line):缩略词处理。line表示待处理的文本。
+- get_word_pos(tag):获取词性。
+- preprocess_sentence(line):对传入的一行文本进行处理预处理：空格，还原缩写，下划线命名，去括号，去除开头末尾空格。line表示需要处理的文本。
+- process_words(line):对一个句子进行分词、词性标注、还原和提取词干的功能。line表示需要处理的文本。
+- filter_all_invachar(line)：过滤掉Python代码中不常用的字符，以减少解析时的错误。line表示需要处理的文本。
+- filter_part_invachar(line):过滤掉Python代码中部分不常用的字符，以减少解析时的错误。line表示需要处理的文本。
+- sql_query_parse(line):解析 python 查询语句，进行文本预处理。line表示需要处理的文本。
+- sql_all_context_parse(line):将提供的文本进行标准化和归一化处理,除去所有特殊字符。line表示需要处理的文本。
+- sql_part_context_parse(line):将提供的文本进行标准化和归一化处理,除去部分特殊字符。line表示需要处理的文本。
 
 ---
 ### getStru2Vec.py文件
