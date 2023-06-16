@@ -4,10 +4,10 @@
 通过给出python文件，对文件进行代码格式化的调整
 ## 二、项目结构说明
 结构说明：
-├── data_preprocessing  
-│   └── hnn_processing  
-│        └── embaddings_process.py  
-│        └── getStru2Vec.py
+>├── hnn_processing   
+>>│   └── hnn_processing  
+>>│   └── embaddings_process.py  
+>>│        └── getStru2Vec.py
 │        └── process_single_corpus.py
 │        └── python_structured.py
 │        └── sqlang_structured.py
