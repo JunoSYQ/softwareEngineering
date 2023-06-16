@@ -30,7 +30,7 @@
 ```
 ### 文件说明
 
-### 2.1. process_single_corpus.py文件
+### process_single_corpus.py文件
 
 #### 2.1.1. 概述
   把语料中的单候选和多候选分隔开
